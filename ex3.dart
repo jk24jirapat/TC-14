@@ -11,17 +11,12 @@ void calculateChange(int amount) {
     1: "1 Baht coin"
   };
 
-  List<String> results = [];
   for (var denom in denominations.keys) {
     if (amount >= denom) {
       int count = amount ~/ denom;
       amount %= denom;
-      results.add("$count x ${denominations[denom]}");
+      print("$count x ${denominations[denom]}");
     }
-  }
-
-  for (var result in results) {
-    print(result);
   }
 }
 
